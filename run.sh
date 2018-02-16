@@ -5,8 +5,8 @@ docker run --name mssql-full \
 -e SA_PASSWORD=Yukon900 \
 -e MSSQL_PID=Developer \
 -p 1431:1433 \
---mount source=sqldata,target=/var/opt/mssql/data
---mount source=sqlbackup, target=/var/opt/mssql/backup
+--mount source=sqldata,target=/var/opt/mssql/data \
+--mount source=sqlbackup,target=/var/opt/mssql/backup \
 -d \
 ericskang/mssql-server-full:latest
 
