@@ -10,7 +10,7 @@ ericskang/mssql-server-full:latest
 
 docker ps
 
-docker exec -ti mssql-full bash 
+docker exec -ti mssql-full sqlcmd -Usa -PYukon900 -i ./database_files.sh
 
 cd /var/opt/mssql/backup
 bash ./database_files.sh
